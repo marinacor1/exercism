@@ -1,8 +1,10 @@
 class Pangram
 
   def self.is_pangram?(str)
-    if str.length == 0
+    if str.include?(a)
       false
+    else
+      true
     end
   end
 end
