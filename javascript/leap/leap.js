@@ -2,8 +2,7 @@
 // method is yellow
 // blue is class method
 
-var Year = function() {};
-Year.prototype.isLeap = function(year) {
+Year.prototype.isLeap = function(isLeap) {
   if (year = 2015)
   return false
 };
