@@ -2,17 +2,25 @@ var Bob = function() {};
 
 Bob.prototype.hey = function(input) {
   var lastIndex = input.length - 1;
-  if (input.charAt(lastIndex) === '!' || input.charAt(lastIndex) === '?'){
-  if (input.toUpperCase() == input){
-    return "Whoa, chill out!";
+  if (input.charAt(lastIndex) === '?'){
+    if (input.toUpperCase() == input){
+      return "Whoa, chill out!";
+    }
+    else {
+      return "Sure.";
+    }
   }
-}
-  if (input.substr(-1) === "?"){
-    return "Sure.";
+  else if (input.charAt(lastIndex) === '!'){
+    if (input.toUpperCase() == input){
+      return "Whoa, chill out!";
+    }
+    else {
+      return "Whatever.";
+    }
   }
-  else {
+   else {
     return "Whatever.";
-  }
+   }
 };
 
 function AllNums(input) {
