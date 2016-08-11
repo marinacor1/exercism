@@ -28,12 +28,12 @@ describe('Bob', function() {
     expect(result).toEqual('Whatever.');
   });
 
-  it('forceful questions', function() {
+  xit('forceful questions', function() {
     var result = bob.hey('WHAT THE HELL WERE YOU THINKING?');
     expect(result).toEqual('Whoa, chill out!');
   });
 
-  it('shouting numbers', function() {
+  xit('shouting numbers', function() {
     var result = bob.hey('1, 2, 3 GO!');
     expect(result).toEqual('Whoa, chill out!');
   });

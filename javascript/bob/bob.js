@@ -1,12 +1,8 @@
-//
-// This is only a SKELETON file for the "Bob" exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
-
 var Bob = function() {};
 
 Bob.prototype.hey = function(input) {
-  if (input.toUpperCase() === input && AllNumbers(input) === false){
+  var lastIndex = input.length - 1
+  if (input.charAt(lastIndex) == '!' && input.toUpperCase() == input){
     return "Whoa, chill out!";
   }
   if (input.substr(-1) === "?"){
@@ -30,6 +26,6 @@ function AllNumbers(input){
   else {
     return false;
   }
-})
-};
+});
+}
 module.exports = Bob;
