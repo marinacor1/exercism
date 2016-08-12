@@ -1,6 +1,7 @@
 var Words = function (){};
 
 Words.prototype.count = function (input){
+  var input = input.replace(/\n/, ' ');
   var eachWord = input.split(" ");
   var groupedWords = new Object();
   var counter = 0;
