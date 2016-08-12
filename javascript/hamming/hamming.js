@@ -4,7 +4,7 @@ Hamming.prototype.compute = function (input1, input2){
   if (input1=== input2){
     return 0;
   }
-  else {
+  else if (input1.length === input2.length){
     var inputs1 = input1.split('');
     var inputs2 = input2.split('');
     var counter = 0;
@@ -14,6 +14,9 @@ Hamming.prototype.compute = function (input1, input2){
       }
     }
     return counter;
+  }
+  else {
+    throw new Error('DNA strands must be of equal length.');
   }
 };
 
