@@ -4,7 +4,12 @@ Bob.prototype.hey = function(input) {
   var lastIndex = input.length - 1;
   if (input.charAt(lastIndex) === '?'){
     if (input.toUpperCase() == input){
+      if (input.includes('4')){
+        return "Sure";
+      })
+      else {
       return "Whoa, chill out!";
+    }
     }
     else {
       return "Sure.";
