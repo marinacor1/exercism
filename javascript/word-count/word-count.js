@@ -4,10 +4,14 @@ Words.prototype.count = function (input){
   var eachWord = input.split(" ");
   var groupedWords = new Object();
   var counter = 0;
-  for (var i = 0; i< eachWord.length; i ++){
+  for (var i = 0; i < eachWord.length; i ++){
     var word = eachWord[i];
-    counter ++;
-    groupedWords[word] = counter;
+    if (Object.keys(groupedWords).indexOf(word) > -1){
+      groupedWords[word] = counter ++;
+    }
+    else {
+      groupedWords[word] = 1;
+    }
   }
   return groupedWords;
 };
