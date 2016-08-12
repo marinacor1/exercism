@@ -6,8 +6,9 @@ Words.prototype.count = function (input){
   var counter = 0;
   for (var i = 0; i < eachWord.length; i ++){
     var word = eachWord[i];
+    var counter = counter || 0;
     if (Object.keys(groupedWords).indexOf(word) > -1){
-      groupedWords[word] = counter ++;
+      groupedWords[word] = groupedWords[word] + 1;
     }
     else {
       groupedWords[word] = 1;
