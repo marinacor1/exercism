@@ -3,6 +3,7 @@ var Words = function (){};
 Words.prototype.count = function (input){
   var input = input.replace(/\n/, ' ');
   var input = input.replace(/\t/, ' ');
+  var input = input.replace('  ', ' ');
   var eachWord = input.split(" ");
   var groupedWords = new Object();
   var counter = 0;
