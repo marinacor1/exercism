@@ -25,13 +25,11 @@ class PangramTest < Minitest::Test
   end
 
   def test_another_missing_character_x
-    skip
     str = 'the quick brown fish jumps over the lazy dog'
     refute Pangram.is_pangram?(str)
   end
 
   def test_pangram_with_underscores
-    skip
     str = 'the_quick_brown_fox_jumps_over_the_lazy_dog'
     assert Pangram.is_pangram?(str)
   end
