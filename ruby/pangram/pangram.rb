@@ -26,12 +26,12 @@ class Pangram
   end
 
   def self.all_letters(letter_count)
-    new_array = self.remove_empty_strings(letter_count)
+    array = self.remove_numbers(letter_count.keys)
+    new_array = self.remove_empty_strings(array)
     new_array.length == 26
   end
 
-  def self.remove_empty_strings(letter_count)
-    array = letter_count.keys
+  def self.remove_empty_strings(array)
     new_array = []
     array.each  do |letter|
       unless letter == " " || letter == "_"
@@ -39,6 +39,13 @@ class Pangram
       end
     end
     new_array
+  end
+
+  def self.remove_numbers(new_array)
+    new = new_array.map do |letter|
+      letter.gsub(/[\d]/, " ")
+    end
+    new
   end
 
 end

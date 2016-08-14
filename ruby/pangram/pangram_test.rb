@@ -35,7 +35,6 @@ class PangramTest < Minitest::Test
   end
 
   def test_pangram_with_numbers
-    skip
     str = 'the 1 quick brown fox jumps over the 2 lazy dogs'
     assert Pangram.is_pangram?(str)
   end
