@@ -40,13 +40,11 @@ class PangramTest < Minitest::Test
   end
 
   def test_missing_letters_replaced_by_numbers
-    skip
     str = '7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog'
     refute Pangram.is_pangram?(str)
   end
 
   def test_pangram_with_mixed_case_and_punctuation
-    skip
     str = '"Five quacking Zephyrs jolt my wax bed."'
     assert Pangram.is_pangram?(str)
   end
