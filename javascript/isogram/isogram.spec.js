@@ -7,7 +7,7 @@ describe('Isogram Test Suite', function () {
     expect(word.isIsogram()).toEqual(true);
   });
 
-  xit('eleven', function () {
+  it('eleven', function () {
     var word = new Isogram('eleven');
 
     expect(word.isIsogram()).toEqual(false);

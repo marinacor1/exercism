@@ -20,6 +20,7 @@ class PangramTest < Minitest::Test
   end
 
   def test_missing_character_x
+    skip 
     str = 'a quick movement of the enemy will jeopardize five gunboats'
     refute Pangram.is_pangram?(str)
   end
