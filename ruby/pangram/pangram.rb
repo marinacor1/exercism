@@ -34,7 +34,7 @@ class Pangram
     array = letter_count.keys
     new_array = []
     array.each  do |letter|
-      unless letter == " "
+      unless letter == " " || letter == "_"
         new_array << letter
       end
     end
