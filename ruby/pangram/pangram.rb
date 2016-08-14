@@ -43,7 +43,7 @@ class Pangram
 
   def self.remove_numbers(new_array)
     new = new_array.map do |letter|
-      letter.gsub(/[\d]/, " ")
+      letter.gsub(/[\d\W]/, " ")
     end
     new
   end
