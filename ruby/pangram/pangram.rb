@@ -1,5 +1,6 @@
-require 'pry'
+
 class Pangram
+
 
   def self.is_pangram?(str)
     if str.length < 26
@@ -28,7 +29,6 @@ class Pangram
   def self.all_letters(letter_count)
     array = self.remove_characters(letter_count.keys)
     new_array = self.remove_empty_strings(array)
-    binding.pry
     new_array.length == 26
   end
 
