@@ -1,17 +1,19 @@
-
 class Pangram
-
 
   def self.is_pangram?(str)
     if str.length < 26
       false
     else
-      letter_count = Hash.new()
-      letters = str.split('')
-      counter = 0
-      letter_count = self.create_count(letters, letter_count, counter)
-      self.all_letters(letter_count)
+      self.check_if_pangram(str)
     end
+  end
+
+  def self.check_if_pangram(str)
+    letter_count = Hash.new()
+    letters = str.split('')
+    counter = 0
+    letter_count = self.create_count(letters, letter_count, counter)
+    self.all_letters(letter_count)
   end
 
   def self.create_count(letters, letter_count, counter)
@@ -21,7 +23,6 @@ class Pangram
       else
         letter_count[letter.downcase] = counter
       end
-      letter_count
     end
     letter_count
   end
