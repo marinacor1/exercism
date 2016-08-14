@@ -50,7 +50,6 @@ class PangramTest < Minitest::Test
   end
 
   def test_pangram_with_non_ascii_characters
-    skip
     str = 'Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich.'
     assert Pangram.is_pangram?(str)
   end
