@@ -15,36 +15,59 @@ class Sieve
   end
 
   def check_primes
-    new_possibilites = build_numbers(2)
+    new_possibilites = (2..@num).to_a
     non_doubles = remove_doubles(new_possibilites)
-    non_fifths = remove_fifths(non_doubles)
-  end
-
-  def build_numbers(current_num)
-    if current_num < @num
-      @all_possibilites << current_num
-      current_num ++
-      build_numbers
-    else
-      @all_possiblities = [2]
-    end
+    non_triples = remove_triples(non_doubles)
+    non_fifths = remove_fifths(non_triples)
+    non_sevenths = remove_sevenths(non_fifths)
   end
 
   def remove_doubles(new_possibilites)
-    non_doubles = [2]
+    non_doubles = []
     new_possibilites.each do |number|
-      if number%2 != 0 && number%3 !=0
+      if number == 2
+        non_doubles << number
+      end
+      if number%2 != 0
         non_doubles << number
       end
     end
     non_doubles
   end
 
-  def remove_fifths(non_doubles)
-    non_fifths = []
+  def remove_triples(non_doubles)
+    non_triples = []
     non_doubles.each do |number|
-      if number%5 != 0 && number%7 != 0
+      if number == 3
+        non_triples << number
+      end
+      if number%3 != 0
+        non_triples << number
+      end
+    end
+    non_triples
+  end
+
+  def remove_fifths(non_triples)
+    non_fifths = []
+    non_triples.each do |number|
+      if number == 5
         non_fifths << number
+      end
+      if number%5 != 0
+        non_fifths << number
+      end
+    end
+  end
+
+  def remove_sevenths(non_fifths)
+    non_sevenths = []
+    non_fifths.each do |number|
+      if number ==7
+        non_sevenths << 7
+      end
+      if number%7 != 0
+        non_sevenths << number
       end
     end
   end
