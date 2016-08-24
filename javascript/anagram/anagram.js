@@ -7,7 +7,6 @@ Anagram.prototype.matches = function (list) {
     result = checkArray(list, this.focusWord);
   }
   else {
-    var array = [];
     list = makeArray(arguments);
     result = checkArray(list, this.focusWord);
   }
@@ -28,6 +27,7 @@ function checkArray(list, focusWord){
       if (keyWord === word.join('').toLowerCase()){
         value = false;
       }
+
     }
     if (focusWord.length == word.length && value === true){
         results.push(word.join(''));
@@ -39,7 +39,7 @@ function checkArray(list, focusWord){
 function makeArray(arguments){
   var list = [];
   for (i=0; i< arguments.length; i++){
-    list.push(arguments[i])
+    list.push(arguments[i]);
   }
   return list;
 }
