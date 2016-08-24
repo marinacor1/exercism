@@ -37,7 +37,7 @@ describe('Anagram', function() {
     expect(matches).toEqual([]);
   });
 
-  xit('detects anagram',function() {
+  it('detects anagram',function() {
     var subject = new Anagram('listen');
     var matches = subject.matches(['enlists', 'google', 'inlets', 'banana']);
 
