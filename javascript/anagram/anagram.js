@@ -21,7 +21,6 @@ Anagram.prototype.matches = function (list) {
         results.push(word.join(''));
       }
     }
-    console.log('results =' + results);
     return results;
 };
 
