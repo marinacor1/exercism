@@ -30,7 +30,7 @@ describe('Anagram', function() {
     expect(matches).toEqual(['stream', 'maters']);
   });
 
-  xit('does not detect anagram subsets',function() {
+  it('does not detect anagram subsets',function() {
     var subject = new Anagram('good');
     var matches = subject.matches(['dog', 'goody']);
 
