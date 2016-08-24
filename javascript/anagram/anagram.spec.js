@@ -23,7 +23,7 @@ describe('Anagram', function() {
     expect(matches).toEqual([]);
   });
 
-  xit('detects multiple anagrams',function() {
+  it('detects multiple anagrams',function() {
     var subject = new Anagram('master');
     var matches = subject.matches(['stream', 'pigeon', 'maters']);
 
