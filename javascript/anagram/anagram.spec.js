@@ -51,7 +51,7 @@ describe('Anagram', function() {
     expect(matches).toEqual(['gallery', 'regally', 'largely']);
   });
 
-  xit('detects anagrams case-insensitively',function() {
+  it('detects anagrams case-insensitively',function() {
     var subject = new Anagram('Orchestra');
     var matches = subject.matches(['cashregister', 'Carthorse', 'radishes']);
 

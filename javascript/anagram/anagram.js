@@ -8,7 +8,9 @@ Anagram.prototype.matches = function (list) {
     var word = list[m].split('');
     var value = true;
     for (i = 0; i < word.length; i++){
-      if (!this.focusWord.includes(word[i])){
+      var keyWord = this.focusWord.toLowerCase();
+      var letter = word[i].toLowerCase();
+      if (!keyWord.includes(letter)) {
         value = false;
       }
     }
