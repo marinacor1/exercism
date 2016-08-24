@@ -12,10 +12,11 @@ Anagram.prototype.matches = function (list) {
         value = false;
       }
     }
-    if (this.focusWord.includes(word[i]) && value === true){
-        results.push(word);
+    if (this.focusWord.length == word.length && value === true){
+        results.push(word.join(''));
       }
     }
+    console.log('results =' + results);
     return results;
 };
 
