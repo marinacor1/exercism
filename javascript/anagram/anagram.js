@@ -9,14 +9,13 @@ Anagram.prototype.matches = function (list) {
   return result;
 };
 
-function checkArray(list, x_this){
-  console.log(x_this);
+function checkArray(list, focusWord){
   var results = [];
   for (m = 0; m < list.length; m++){
     var word = list[m].split('');
     var value = true;
     for (i = 0; i < word.length; i++){
-      var keyWord = x_this.toLowerCase();
+      var keyWord = focusWord.toLowerCase();
       var letter = word[i].toLowerCase();
       if (!keyWord.includes(letter)) {
         value = false;
@@ -25,7 +24,7 @@ function checkArray(list, x_this){
         value = false;
       }
     }
-    if (x_this.length == word.length && value === true){
+    if (focusWord.length == word.length && value === true){
         results.push(word.join(''));
       }
     }
