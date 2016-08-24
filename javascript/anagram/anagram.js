@@ -13,6 +13,9 @@ Anagram.prototype.matches = function (list) {
       if (!keyWord.includes(letter)) {
         value = false;
       }
+      if (keyWord === word.join('').toLowerCase()){
+        value = false;
+      }
     }
     if (this.focusWord.length == word.length && value === true){
         results.push(word.join(''));

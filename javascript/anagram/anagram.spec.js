@@ -58,7 +58,7 @@ describe('Anagram', function() {
     expect(matches).toEqual(['Carthorse']);
   });
 
-  xit('does not detect a word as its own anagram',function() {
+  it('does not detect a word as its own anagram',function() {
     var subject = new Anagram('banana');
     var matches = subject.matches(['Banana']);
 
