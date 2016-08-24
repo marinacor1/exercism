@@ -44,7 +44,7 @@ describe('Anagram', function() {
     expect(matches).toEqual(['inlets']);
   });
 
-  xit('detects multiple anagrams',function() {
+  it('detects multiple anagrams',function() {
     var subject = new Anagram('allergy');
     var matches = subject.matches(['gallery', 'ballerina', 'regally', 'clergy', 'largely', 'leading']);
 
