@@ -6,6 +6,11 @@ Anagram.prototype.matches = function (list) {
   if (arguments[0].constructor === Array){
     result = checkArray(list, this.focusWord);
   }
+  else {
+    var array = [];
+    list = makeArray(arguments);
+    result = checkArray(list, this.focusWord);
+  }
   return result;
 };
 
@@ -29,6 +34,13 @@ function checkArray(list, focusWord){
       }
     }
     return results;
+}
 
+function makeArray(arguments){
+  var list = [];
+  for (i=0; i< arguments.length; i++){
+    list.push(arguments[i])
+  }
+  return list;
 }
 module.exports = Anagram;
