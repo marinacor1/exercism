@@ -24,8 +24,15 @@ function checkArray(list, focusWord){
       if (!keyWord.includes(letter)) {
         value = false;
       }
-      if (keyWord === word.join('').toLowerCase()){
+      if (keyWord !== word.join('').toLowerCase()){
         value = false;
+      }
+      var keyArray = keyWord.split('').sort();
+      var wordArray = word.join('').split('').sort();
+      console.log('key=' + keyArray)
+      console.log('word=' + wordArray)
+      if (keyArray.toString().toLowerCase() !== wordArray.toString().toLowerCase()){
+        value = false
       }
 
     }
