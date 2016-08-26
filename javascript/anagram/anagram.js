@@ -24,25 +24,18 @@ function checkArray(list, focusWord){
       if (!keyWord.includes(letter)) {
         value = false;
       }
-      // console.log('keyword' + keyWord);
-      // console.log('wordjoin'  + word.join('').toLowerCase())
-      // console.log('word' + word)
-      // if (keyWord !== word.join('').toLowerCase()){
+      // if (keyWord.sort() !== word.join('').sort().toLowerCase()){
       //   value = false;
       // }
-      var keyArray = keyWord.split('').sort();
-      var wordArray = word.join('').split('').sort();
-      console.log('keyArray = ' + keyArray);
-      console.log('wordArray = ' + wordArray);
-
-      // console.log('key=' + keyArray.sort().toString().toLowerCase())
-
-      // console.log('word=' + wordArray.sort().toString().toLowerCase())
-      // if (keyArray.toString().toLowerCase().sort() !== wordArray.toString().toLowerCase().sort()){
-      //   value = false
-      // }
+      // var keyArray = keyWord.split('').sort();
+      // var wordArray = word.join('').split('').sort();
+      
+      if (list[m].toLowerCase() === focusWord.toLowerCase()){
+        value = false;
+      }
 
     }
+      console.log('value is ' + value + 'focusWord.length = ' + focusWord.length + 'word length = ' + word.length);
     if (focusWord.length == word.length && value === true){
         results.push(word.join(''));
       }
