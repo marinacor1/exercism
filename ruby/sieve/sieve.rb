@@ -18,8 +18,11 @@ class Sieve
     all_possibilites = (2..@num).to_a
     if index < all_possibilites.length
       all_possibilites = remove_next_prime(all_possibilites, all_possibilites[index])
-      index ++
+      index += 1
     end
+  end
+
+  def remove_next_prime(all_possibilites, specific_num)
   end
 
 end
