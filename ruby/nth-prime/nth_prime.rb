@@ -8,7 +8,6 @@ class Prime
   def self.create_primes(num)
     max = 2 + (num * num)
     all_list = (2..max).to_a #get numbers to increase by at least hte index
-    binding.pry
     all_list.each do |num|
       all_list = self.remove_non_primes(all_list, num)
     end
@@ -16,10 +15,12 @@ class Prime
   end
 
   def self.remove_non_primes(all_list, specific_num)
-    all_list.map do |num|
+    new_list = [1]
+    all_list.each do |num|
       unless num%specific_num === 0 && num != specific_num
-        num
-      end.compact
+        new_list << num
+      end
     end
+    new_list.uniq.compact
   end
 end
