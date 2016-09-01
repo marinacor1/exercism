@@ -14,15 +14,19 @@ class Sieve
   end
 
   def check_primes
-    index = 0
-    all_possibilites = (2..@num).to_a
-    if index < all_possibilites.length
-      all_possibilites = remove_next_prime(all_possibilites, all_possibilites[index])
-      index += 1
+    all_possibilities = (2..@num).to_a
+    all_possibilities.each do |number|
+      all_possibilities = remove_next_prime(all_possibilities, number)
     end
+    all_possibilities
   end
 
-  def remove_next_prime(all_possibilites, specific_num)
+  def remove_next_prime(all_possibilities, specific_num)
+    all_possibilities.map do |num|
+      unless num%specific_num === 0  && num != specific_num
+        num
+      end
+    end.compact
   end
 
 end
