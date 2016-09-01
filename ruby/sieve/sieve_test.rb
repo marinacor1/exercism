@@ -9,21 +9,21 @@ class SieveTest < Minitest::Test
     expected = []
     assert_equal expected, Sieve.new(1).primes
   end
-  
+
   def test_find_first_prime
     expected = [2]
     assert_equal expected, Sieve.new(2).primes
   end
-  #
-  # def test_find_primes_up_to_10
-  #   expected = [2, 3, 5, 7]
-  #   assert_equal expected, Sieve.new(10).primes
-  # end
-  #
-  # def test_limit_is_prime
-  #   expected = [2, 3, 5, 7, 11, 13]
-  #   assert_equal expected, Sieve.new(13).primes
-  # end
+
+  def test_find_primes_up_to_10
+    expected = [2, 3, 5, 7]
+    assert_equal expected, Sieve.new(10).primes
+  end
+
+  def test_limit_is_prime
+    expected = [2, 3, 5, 7, 11, 13]
+    assert_equal expected, Sieve.new(13).primes
+  end
 
   def test_primes_up_to_1000 # rubocop:disable Metrics/MethodLength
     expected = [
