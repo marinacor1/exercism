@@ -6,14 +6,6 @@ class Sieve
   end
 
   def primes
-    if @num < 2
-      []
-    else
-      check_primes
-    end
-  end
-
-  def check_primes
     all_possibilities = (2..@num).to_a
     all_possibilities.each do |number|
       all_possibilities = remove_next_prime(all_possibilities, number)
