@@ -6,13 +6,13 @@ require 'minitest/pride'
 require_relative 'nth_prime'
 
 class TestPrimes < Minitest::Test
-  def test_first
-    assert_equal 2, Prime.nth(1)
-  end
-
-  def test_second
-    assert_equal 3, Prime.nth(2)
-  end
+  # def test_first
+  #   assert_equal 2, Prime.nth(1)
+  # end
+  #
+  # def test_second
+  #   assert_equal 3, Prime.nth(2)
+  # end
 
   def test_sixth_prime
     assert_equal 13, Prime.nth(6)
