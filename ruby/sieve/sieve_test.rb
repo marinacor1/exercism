@@ -9,11 +9,11 @@ class SieveTest < Minitest::Test
     expected = []
     assert_equal expected, Sieve.new(1).primes
   end
-  #
-  # def test_find_first_prime
-  #   expected = [2]
-  #   assert_equal expected, Sieve.new(2).primes
-  # end
+  
+  def test_find_first_prime
+    expected = [2]
+    assert_equal expected, Sieve.new(2).primes
+  end
   #
   # def test_find_primes_up_to_10
   #   expected = [2, 3, 5, 7]
