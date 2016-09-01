@@ -15,7 +15,6 @@ class TestPrimes < Minitest::Test
   end
 
   def test_sixth_prime
-    skip
     assert_equal 13, Prime.nth(6)
   end
 
