@@ -29,11 +29,13 @@ function checkArray(list, focusWord){
       // }
       // var keyArray = keyWord.split('').sort();
       // var wordArray = word.join('').split('').sort();
-      
-      if (list[m].toLowerCase() === focusWord.toLowerCase()){
+      var currentWord = list[m].toLowerCase();
+      var goalWord = focusWord.toLowerCase();
+      console.log('x' + currentWord.split('').sort());
+      console.log('y' + goalWord.split('').sort());
+      if (currentWord === goalWord && currentWord.split('').sort() !== goalWord.split('').sort()){
         value = false;
       }
-
     }
       console.log('value is ' + value + 'focusWord.length = ' + focusWord.length + 'word length = ' + word.length);
     if (focusWord.length == word.length && value === true){

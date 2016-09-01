@@ -2,11 +2,12 @@ require 'pry'
 class Prime
   def self.nth(num)
     primes = self.create_primes(num)
+    # binding.pry
     primes[num]
   end
 
   def self.create_primes(num)
-    max = 2 + (num * num)
+    max = num + 1 #this is wrong
     all_list = (2..max).to_a #get numbers to increase by at least hte index
     all_list.each do |num|
       all_list = self.remove_non_primes(all_list, num)
