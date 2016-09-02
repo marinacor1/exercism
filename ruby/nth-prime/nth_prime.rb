@@ -3,7 +3,6 @@ class Prime
   def self.nth(limit)
     @limit = limit
     primes = self.create_primes
-    binding.pry
     primes[@limit]
   end
 
@@ -14,7 +13,6 @@ class Prime
     all_list.each do |num|
       all_list = self.remove_non_primes(all_list, num) #the same array keeps getting passed in
     end
-    binding.pry
     all_list
   end
 
@@ -27,10 +25,9 @@ class Prime
     all_list.uniq
   end
 
-  def self.remove_non_primes(all_list, specific_num)
+  def self.remove_non_primes(all_list, specific_num) #this is not removing primes
     new_list = [1]
     all_list.each do |num|
-      binding.pry
       unless num%specific_num === 0 && num != specific_num
         new_list << num
       end
