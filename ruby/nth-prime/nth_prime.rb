@@ -9,6 +9,7 @@ class Prime
   def self.create_primes
     # max = num + 1 #this is wrong
     # all_list = (2..max).to_a
+    
     all_list = [1]
     all_list.each do |num|
       all_list = self.remove_non_primes(all_list, num) #the same array keeps getting passed in
